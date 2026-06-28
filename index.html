@@ -468,30 +468,148 @@ footer strong { color: rgba(255,255,255,.72); }
   <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
 
-<!-- ══ HERO ══ -->
-<section class="hero" id="home">
-  <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="">
-    <source src="assets/ocean.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">📍 Mombasa County, Kenya</div>
-    <h1><span class="blue">Blue</span>Dada<br>CBO</h1>
-    <p class="hero-sub">Community Based Organization</p>
-    <p class="hero-tagline">Empowering coastal communities through sustainable blue economy solutions, marine conservation, and women-led impact.</p>
-    <div class="hero-pills">
-      <span class="pill">🌊 Women Led</span>
-      <span class="pill">🐠 Community Focused</span>
-      <span class="pill">💙 Impact Driven</span>
-    </div>
-    <div class="hero-cta">
-      <a href="#about" class="btn-primary">Discover Our Work</a>
-      <a href="#contact" class="btn-outline">Join / Contact Us</a>
-    </div>
-  </div>
-  <button id="mute-btn" onclick="toggleMute()">🔇 Unmute</button>
-</section>
+<<!-- Hero Section with YouTube Background Video -->
+<section style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
 
+  <!-- YouTube Background Video -->
+  <iframe
+    src="https://www.youtube.com/embed/cstirCR6e5w?autoplay=1&mute=1&loop=1&playlist=cstirCR6e5w&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3"
+    style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100vw;
+      height: 56.25vw;
+      min-height: 100vh;
+      min-width: 177.77vh;
+      transform: translate(-50%, -50%);
+      border: none;
+      pointer-events: none;
+      z-index: 0;
+    "
+    allow="autoplay; fullscreen"
+    frameborder="0">
+  </iframe>
+
+  <!-- Dark overlay -->
+  <div style="
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;">
+  </div>
+
+  <!-- Hero Content -->
+  <div style="
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding: 20px;">
+
+    <!-- Mombasa County Badge — made more visible -->
+    <div style="
+      border: 1.5px solid rgba(255,255,255,0.9);
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      color: #ffffff;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 6px;">
+      📍 MOMBASA COUNTY, KENYA
+    </div>
+
+    <!-- Main Title -->
+    <h1 style="margin: 0; line-height: 1;">
+      <span style="
+        font-style: italic;
+        font-size: 5rem;
+        color: #4a9ebe;
+        font-family: Georgia, serif;">Blue</span><span style="
+        font-size: 5rem;
+        color: #ffffff;
+        font-family: Georgia, serif;
+        font-weight: bold;">Dada</span>
+    </h1>
+    <h1 style="
+      font-size: 5.5rem;
+      color: #ffffff;
+      font-family: Georgia, serif;
+      font-weight: bold;
+      margin: 0 0 10px 0;">CBO</h1>
+
+    <!-- Subtitle -->
+    <p style="
+      letter-spacing: 4px;
+      font-size: 0.85rem;
+      color: #ffffff;
+      margin: 0 0 16px 0;">
+      COMMUNITY BASED ORGANIZATION
+    </p>
+
+    <!-- Description -->
+    <p style="
+      max-width: 560px;
+      font-size: 1rem;
+      color: #e0e0e0;
+      line-height: 1.6;
+      margin: 0 0 28px 0;">
+      Empowering coastal communities through sustainable blue economy
+      solutions, marine conservation, and women-led impact.
+    </p>
+
+    <!-- Badges -->
+    <div style="
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 28px;">
+      <span style="border: 1.5px solid white; border-radius: 20px; padding: 6px 16px; font-size: 0.8rem; color: white;">🌊 WOMEN LED</span>
+      <span style="border: 1.5px solid white; border-radius: 20px; padding: 6px 16px; font-size: 0.8rem; color: white;">🌻 COMMUNITY FOCUSED</span>
+      <span style="border: 1.5px solid white; border-radius: 20px; padding: 6px 16px; font-size: 0.8rem; color: white;">💙 IMPACT DRIVEN</span>
+    </div>
+
+    <!-- Buttons -->
+    <div style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+      <a href="#about" style="
+        background: #4a9ebe;
+        color: white;
+        padding: 14px 32px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+        font-weight: bold;">
+        DISCOVER OUR WORK
+      </a>
+      <a href="#contact" style="
+        background: transparent;
+        color: white;
+        padding: 14px 32px;
+        border-radius: 4px;
+        border: 2px solid white;
+        text-decoration: none;
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+        font-weight: bold;">
+        JOIN / CONTACT US
+      </a>
+    </div>
+
+  </div>
+</section>
 <!-- WAVE -->
 <div class="wdiv" style="background:linear-gradient(to bottom,#1A4FA8,var(--navy))">
   <svg viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,28 C360,56 720,0 1080,32 C1260,48 1380,14 1440,22 L1440,56 L0,56 Z" fill="#0D1B4B"/></svg>
